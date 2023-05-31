@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+        <!-- Boostrap 導入程式 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="slide.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="jquery-ui.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <!-- W3導覽列 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- 字體 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/cwtexyen.css">
+    <title>動物醫院</title>
+
+
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #menu_control{
+            position: absolute;
+            z-index: -2;
+            opacity: 0;
+        }
+        .menu_btn{
+            width: 50px;
+            height: 50px;
+            background-color: rgb(46, 46, 46);
+            border-radius: 8px;/* 邊框圓角 */
+            display: block;
+            position: absolute;
+            top: 5px;
+            right:1px;
+            transition: .3s;
+        }
+        .menu_btn:hover{
+            border-radius: 12px;/* 邊框圓角 */
+            background-color: rgb(101, 97, 97);
+            box-shadow:0px 2px 1px rgb(101, 97, 97);
+        }
+        .menu_btn span{
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: block;
+            overflow: hidden;
+        }
+        .menu_btn::before{
+            content: '';
+            position: absolute;
+            height: 3px;
+            left:6px;
+            width: 38px;
+            background-color: rgb(236, 237, 234);              
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px rgb(255, 251, 251),0px -8px 0px rgb(255, 251, 251);
+        }
+        .item nav{
+            background-color: rgb(41, 33, 33);
+            width:25%;
+            height:100%;
+            opacity:95%;
+            position:absolute;
+            padding:12px 5px;
+            left: -100%;
+            transition: .3s;
+            z-index: 1;
+        }
+            
+        .item nav a{       
+            display: block;
+            font-size:24px;
+            line-height: 24px;    
+            color: rgb(245, 237, 237);
+            text-decoration: none;
+            padding: 15px 5px;
+            transition: .3s ;
+        }
+        #menu_control:checked ~ .item nav{
+            left:0;
+        }
+        .item nav a:hover{
+            background-color:rgb(231, 186, 89);
+            color: rgb(45, 48, 54);;
+            border-radius:20px;
+            box-shadow: 1.5px 1.5px #fdb926;
+            opacity: 90%;
+        }
+
+
+
+        .bgc{
+            background-color: rgb(28, 63, 99);
+            height: auto;
+        }
+
+
+ 
+
+/******************************************************** 導覽列******************************************************************************* */
+.main-header {
+width: 100%;
+background-color: #ffffff;
+position: fixed;
+right: 0;
+top: 0%;
+box-shadow: 0 5px 40px -15px;
+z-index: 2;   /*東西在上面+這個 */
+}
+.nav_bar {
+display: flex;
+padding: 10px; 
+margin-right: 120px   ;
+letter-spacing: 0.3em ;
+color: #303030;
+}  
+.nav_bar a{
+text-decoration:none;
+transition: .5s;
+font-size: 17px;
+font-family:Arial;
+}
+.nav_bar a:hover{
+    color: #fa9f84;
+}
+.container {
+width: 1200px;
+margin: auto;
+display: flex;
+justify-content: space-between;
+}
+.main-header img{
+margin: 15px 150px;
+}
+.w3-bar {
+display: flex;
+}
+
+.w3-container {
+width: 100%;
+margin: auto;
+display: flex;
+justify-content: space-around;
+}
+.w3-bar span {
+    font-size: 2em;
+    margin-left: 20px;
+}
+
+
+    </style>
+
+
+
+
+
+
+</head>
+<body>
+    <!-- 手機按鈕 --> 
+<div class="main-header">
+  <div class="w3-container ">
+      <a href="#"><img src="img/浪-10.png" alt="loge"></a>
+      <nav><h5><b>
+          <div class="w3-bar">
+            <div class="nav_bar">
+              <a href="我要領養.html" class="w3-bar-item ">我要領養</a>
+              <a href="爆料.html" class="w3-bar-item ">爆料專區</a>
+              <div class="w3-dropdown-hover">
+                  <button class="w3-button" style="font-size: 17px;font-family:Arial;">意 見 回 饋</button>
+                  <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                      <a href="https://forms.gle/oJC2DeT1gdb2wfpg7" class="w3-bar-item ">會員回饋</a>
+                      <a href="https://docs.google.com/spreadsheets/d/1yBip4jbvibY0Wr7W4punanXS3C27ernKUiqJ9R7u5EU/edit?usp=sharing" class="w3-bar-item ">系統回應</a>
+                  </div>
+              </div>
+              <a href="知識小學堂.html" class="w3-bar-item ">領養須知</a>
+              <a href="動物醫院.html" class="w3-bar-item ">動物醫院</a>
+              <a href="關於我們.html" class="w3-bar-item ">關於我們</a>
+              <a href="登入.html" class="w3-bar-item ">登入/註冊</a>
+            </div>
+          </div>
+      </h5></b></nav>
+  </div>
+</div>
+
+
+
+
+
+    <div class="bgc">
+        <div class="container">
+            <form>
+                <input class="bar" id="tag" placeholder="搜尋醫院名字...">
+                <button id="search" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+
+        <div class="map">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1U8un_rnEbqZYTjoAV7O2JxJJg0lEyeM&ehbc=2E312F" width="1520" height="750"></iframe>
+                
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+<title>浪牠回家吧 | 知識小學堂</title>
+
+<!-- W3導覽列 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- 字體 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/cwtexyen.css">
+<link rel="stylesheet" href="https://fonts.google.com/specimen/Raleway?preview.text=01%2002%2003%2004&preview.text_type=custom#standard-styles">
+<!-- icon -->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" >
+<!-- AOS動畫 -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+    body,h1,h2,h3,h4,h5 {
+      font-family: "cwTeXYen", sans-serif;}
+      .p{
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        letter-spacing: 1px;
+        line-height: 1.7;
+        
+      }
+      .b{
+        font-weight: 600;
+        color: #333333; 
+        font-size: 28px; 
+        line-height: 1.5;
+      }
+</style>
+
+<style>
+
+
+@media screen and (min-width:768px){/*桌機介面*/  
+/* 導覽列********************************************************************************************************************* */
+.main-header {
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    right: 0;
+    top: 0%;
+    box-shadow: 0 5px 40px -15px;
+    z-index: 2;   /*東西在上面+這個 */
+    }
+    .nav_bar {
+    display: flex;
+    padding: 10px; 
+    margin-right: 120px   ;
+    letter-spacing: 0.3em ;
+    color: #303030;
+    }  
+    .nav_bar a{
+    text-decoration:none;
+    transition: .5s;
+    font-size: 17px;
+    font-family:Arial;
+    }
+    .nav_bar a:hover{
+        color: #fa9f84;
+    }
+    .container {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    }
+    .main-header img{
+    margin: 15px 150px;
+    }
+    .w3-bar {
+    display: flex;
+    }
+
+    .w3-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    }
+    .w3-bar span {
+        font-size: 2em;
+        margin-left: 20px;
+    }
+/* ***************************************************  字體  ***************************************************** */
+
+
+/* footer********************************************************************************************************************* */
+
+.conpyright{
+	width: 100%;
+	text-align: center;
+	margin: 25px 0 0 ;
+	padding: 10px 0px;
+	background-color: #666767;
+	color: #d8d8d8;
+}
+
+/* ********************************************************  置頂button  ************************************************************* */
+.toTop-arrow {
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	border-radius: 33%;
+	opacity: 0.6;
+	background: #000;
+	cursor: pointer;
+	position:fixed;
+	right: 1rem;
+	bottom: 1rem;
+	display: none;
+}
+.toTop-arrow::before, .toTop-arrow::after {
+	width: 18px;
+	height: 5px;
+	border-radius: 3px;
+	background: #fff3fd;
+	position: absolute;
+	content: "";
+}
+.toTop-arrow::before {
+	transform: rotate(-45deg) translate(0, -50%);
+	left: 0.5rem;
+}
+.toTop-arrow::after {
+	transform: rotate(45deg) translate(0, -50%);
+	right: 0.5rem;
+}
+.toTop-arrow:focus {outline: none;}
+/* 容器*************************************************************************************************************************** */
+.container {
+  margin-right: 300px;
+  margin-left: 250px;
+  margin-top: 80px;
+  padding-right: 50px;
+  padding-left: 50px;
+  width: 100%;
+  max-width: 1140px;      /* // 隨螢幕尺寸而變，當螢幕尺寸 ≥ 1200px 時是 1140px。 */
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.col {
+  position: relative;
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+
+}
+/* 流浪狗內文********************************************************************************************************************* */
+.knowlege p{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  letter-spacing: 1px;
+  line-height: 1.8;
+}
+.knowlege h2{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+.stray-animal-problem{  /* 字全集 *************************/
+  word-break: normal;
+  text-align: justify;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  word-break: normal ;
+}
+.stray-animal-problem img{
+  width: 469px;
+  height: auto;
+}
+.stray-animal-problem li{
+  font-size: 20px;
+  
+}
+/* 狗狗卡片************************************************************************************************************************** */
+.happy{
+          width: 940px;
+          margin: 50px auto;
+          padding: 0px;
+          box-shadow: 0 0px 10px #d6d6d6 ;
+          overflow: hidden; /* 避免長方框下面顯示不正常 */
+          display: flex;
+          align-items: center;
+          
+        }
+        .dogcard{
+          float:right; /* 圖片在左邊 */
+          width: 500px;
+          
+        }
+        .dogcard img{
+          width: 469px;
+          height: auto;
+        }
+        .textcard{
+          float: left;  /* 文字在右邊 */
+          width: 540px;
+          margin-right: 55px;
+        }
+
+        .textcard p{
+          float:right; 
+          
+        }
+        .textcard h2{
+          float:left; 
+          padding: 7.5px; 
+          font-size: 35px;
+        }
+        .textcard ol{
+          padding: 0;
+          margin: 15px;
+        }
+
+        .textcard li::marker{
+          font-family: 'Raleway';
+          font-size: 25px;
+          color:#010101;
+
+          
+        }
+
+        .textcard li a{
+          transition: .5s;
+          text-decoration: none;
+          letter-spacing: .8px;
+          line-height: 40px;
+        }
+        .textcard{
+          box-shadow: #303030;
+        }
+        .active{
+          color: #fa9f84;
+        }
+
+      
+        /* 狗狗大綱按鈕********************************************************************************************************************* */
+        .outbtn{
+          width: 250px;
+          height: 200px;
+          display: flex;
+          display: inline-block; /*按鈕橫向 */
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          line-height: 40px;
+          color: #000;
+          background-color: transparent;
+          position: relative;
+          transition: all .3s linear;
+          padding: 10px;
+        }
+        .outbtn  a{
+          transition: .5s;
+          text-decoration: none;
+          color: #090909;
+          font-family: "cwTeXYen", sans-serif;
+          font-weight: 500;
+          font-size: 32px;
+          letter-spacing: 3px;
+          position: relative;
+          z-index: 1;
+        }
+        .outbtn::before{
+            content: "";
+            width: 100%;
+            height: 0%;
+            display: block;
+            background-color: #fbefeb;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all .3s ease;
+        }
+        .outbtn:hover{
+            color: #fff;
+        }
+        .outbtn:hover::before{
+            height: 100%;
+        }
+        .outbtn hr{
+        width:90%;
+        margin:0 auto;
+        border: 0;
+        border: 1px solid rgb(29, 24, 24);
+        transition: .5s;
+        position: relative;
+        z-index: 1;
+        }
+        .outbtn img{
+          width: 200px;
+
+        }
+        /* ****************************************************** 全頁大綱 ********************************************** */
+        .big-outline{
+          width: 180px;;
+          height: 220px;
+          padding: 0;
+          margin: 25px;
+          margin-top: 100px;
+          margin-left: 55px;
+          position:fixed;
+          border-radius: 5%;
+        }
+        .big-outline a{
+          color: #090909;
+          margin: 10px;
+          padding: 3px;
+          text-decoration: none;
+          line-height: 1.8;
+        }
+        .big-outline p{
+          margin: 13px;
+          font-size: 20px;
+
+        }
+      }
+
+</style>
+
+
+<body>
+
+<!-- 手機按鈕 -->
+<input type="checkbox" name="" id="menu_control">
+<div class="item">    
+    <label for="menu_control" class="menu_btn">
+        <span>選單</span>
+    </label>
+
+
+<!-- 手機按鈕 -->
+<div class="main-header">
+  <div class="w3-container ">
+      <a href="#"><img src="img/浪-10.png" alt="loge"></a>
+      <nav><h5><b>
+          <div class="w3-bar">
+            <div class="nav_bar">
+              <a href="我要領養.html" class="w3-bar-item ">我要領養</a>
+              <a href="爆料.html" class="w3-bar-item ">爆料專區</a>
+              <div class="w3-dropdown-hover">
+                  <button class="w3-button" style="font-size: 17px;font-family:Arial;">意 見 回 饋</button>
+                  <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                      <a href="https://forms.gle/oJC2DeT1gdb2wfpg7" class="w3-bar-item ">會員回饋</a>
+                      <a href="https://docs.google.com/spreadsheets/d/1yBip4jbvibY0Wr7W4punanXS3C27ernKUiqJ9R7u5EU/edit?usp=sharing" class="w3-bar-item ">系統回應</a>
+                  </div>
+              </div>
+              <a href="知識小學堂.html" class="w3-bar-item ">領養須知</a>
+              <a href="動物醫院.html" class="w3-bar-item ">動物醫院</a>
+              <a href="關於我們.html" class="w3-bar-item ">關於我們</a>
+              <a href="登入.html" class="w3-bar-item ">登入/註冊</a>
+            </div>
+          </div>
+      </h5></b></nav>
+  </div>
+</div>
+
+
+<!-- ************************************************ 大綱 ****************************************************-->
+<div class="big-outline">
+  <p>目錄</p>
+  <a href="#stray-animal-problem">1. 牠們如何形成</a><br>
+  <a href="#animal-problem">2. 牠們露宿街頭會遭遇</a><br>
+  <a href="#before">3. 領養前注意</a><br>
+  <a href="#after">4. 領養後注意</a><br>
+  <a href="#poor">5. 牠們的健康</a><br>
+  <a href="#eat">6. 牠們的飲食</a>
+</div>
+
+<!-- *************************************************  內容  *************************************************** -->
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+
+
+<!-- **********************************************  知識小學堂  ****************************************************** -->
+<!-- ****************************** 流浪動物的形成  *********************************-->
+        <div id="stray-animal-problem"><br><br><br><br>
+
+                <h3 class="w3-center w3-jumbo" style="margin-bottom:64px">流浪動物的形成</h3>
+                  <h4>
+                    <b style="color: #ff5375;font-weight: 500;">「領養代替購買」</b>在如今即使不養寵物的人都能琅琅上口的話，起源來至於2006年4月11日－國際寵物日。而流浪動物又是從什麼時候形成的呢？<br><br>
+                    在臺灣飼養寵物已有多年歷史，雖確切時間已不可考，但據陳第所寫的《東番記》，就有提到鄭和下西洋（1405）時見到臺灣原住民飼養動物的情形，故原住民飼養貓狗等動物的歷史，
+                    至少可推至六百年前。而當時飼養寵物是為了協助狩獵，直至1970年代末至今，因為臺灣經濟發展迅速，百姓豐衣足食並有餘力養寵物，飼養寵物的價值也從實用性，轉變為娛樂玩賞的價值。<br><br>
+
+                    這百年來對寵物的絕育概念並無太多，因此流浪狗也慢慢逐漸形成。至今<b style="color: #ff5353;font-weight: 500;">根據農委會109年的全國流浪犬數量統計顯示，臺灣約有15萬隻流浪犬，</b>儘管政府每年捕捉收容上萬隻流浪犬，
+                    並實施絕育措施，但始終無法控制流浪犬的數量。<br><br>
+                    
+                    <b style="color: #333333; font-weight: 600; font-size: 28px; line-height: 1.5;">臺灣流浪動物形成的主因分為：</b><br>
+                    <img src="img/三種浪犬.jpg" style="margin: 30px 150px 30px  ;width: 800px ;height: 400px;" alt="三種浪犬" ><br>
+                    
+                    <b style="color: #333333; font-weight: 400;font-size: 25px;">【 放養犬貓 】</b><br>
+                    飼主放任犬貓自由行走，而且通常都尚未絕育，因此犬貓四處交配繁殖，衍生更多浪貓浪犬。<br><br>
+                    
+                    <b style="color: #333333; font-weight: 400;font-size: 25px;">【 不肖商人的非法繁殖 】</b><br>
+                    許多不肖業者利用消費者喜歡純種犬貓的偏好，惡意地去繁殖純種貓犬，而一些無法繁殖的老年犬貓，則是棄養於街頭任其自生自滅。<br><br>
+
+                    <b style="color: #333333; font-weight: 400;font-size: 25px;">【 家寵的走失 】</b><br>
+                    其中包含犬貓迷路、飼主惡意棄養，根據相信動物協會在2017年北北基絕育的2705隻浪犬中統計，有近12.8%屬於走失犬。<br><br>
+
+                    根據社團法人臺灣懷生相信動物協會（簡稱相信動物）所做的「臺灣浪犬來源大調查」，放養家犬與野犬的比例高達70%以上，是貢獻最多浪犬的高產能族群。<br>
+                  </h4>
+
+        </div>
+                 
+
+
+
+<!-- *************************************************  置頂button  *************************************************** -->
+<button type="button" id="BackTop" class="toTop-arrow" title="回上面"></button>
+
+
+
+      <!-- ***********************************************  狗狗照片解說-照片  ***************************************************** -->
+      <div class="happy">
+        <div id="one" class="dogcard picture" >
+          <img src="img/happy.jpg" alt="one" >
+        </div>
+        
+        <div id="two" class="dogcard picture" style="display:none">
+          <img src="img/shiba1.JPG" alt="two">
+        </div>
+        
+        <div id="three" class="dogcard picture" style="display:none">
+          <img src="img/healthy-02.png" alt="three">
+        </div>
+        
+        <div id="fore" class="dogcard picture" style="display:none">
+          <img src="img/food-03.png" alt="fore">
+        </div>
+        <!-- ************************************************  狗狗照片解說-文字  ******************************************************** -->
+        <div class="textcard">
+          <ol style="list-style:none;"><h5>
+            <li class="button">
+              <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('one');">
+                <h2 class="w3-leftbar" >01</h2>
+                <p alt="one" >臺灣流浪犬貓長年都是愛護動物者關心</p>
+              </a>
+            </li>
+           
+            <li class="button">
+              <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('two');">
+                <h2 class="w3-leftbar">02</h2>
+                <p alt="two" >臺灣流浪犬貓長年都是愛護動物者關心</p>
+              </a>
+            </li>
+           
+            <li class="button">
+              <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('three');">
+                <h2 class="w3-leftbar">03</h2>
+                <p alt="three" >臺灣流浪犬貓長年都是愛護動物者關心</p>
+              </a>
+            </li>
+            
+            <li class="button">
+              <a href="javascript:void(0)" class="w3-hover-opacity" onclick="openImg('fore');">
+                <h2 class="w3-leftbar">04</h2>
+                <p alt="fore"  id="animal-problem">臺灣流浪犬貓長年都是愛護動物者關心</p>
+              </a>
+            </li>
+          </h5>
+
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    
+                       <!-- ****************************** 牠們露宿街頭會遭遇什麼  *********************************-->
+      <div class="animal-problem">
+        <h3 class="w3-center w3-jumbo" style="margin-bottom:64px">牠們露宿街頭會遭遇什麼</h3>
+        <h4 style="color: rgb(253, 146, 92);">
+          少了家的庇護，流浪是條忐忑路<br>
+          倘若你沒有了家，你的日子會是什麼模樣?臺灣有將近15萬隻浪犬無家可歸，而他們隨時都可能面臨著生命危險......<br><br>
+        </h4>
+        <h4>
+          <b style="color: #333333; font-weight: 400;font-size: 25px;">【 受凍挨餓 】</b><br>
+          浪浪在外生存無依靠，只能靠自己找尋穩定的食物來源，否則有一餐無一餐是習以為常的事情，再加上生活環境糟糕，浪浪有可能染病而亡。<br><br>
+
+           <b style="color: #333333; font-weight: 400;font-size: 25px;">【 天災人禍 】</b><br>
+           浪浪無所不在，有些浪浪時常在車水馬龍的車陣中四竄，牠們可能因為車輛閃躲不及，而發生意外。颱風、寒流、豪大雨等極端天氣也是考驗之一。<br><br>
+
+           <b style="color: #333333; font-weight: 400;font-size: 25px;">【	遭受攻擊 】</b><br>
+           遊走在郊外的浪浪，有些會成群結黨，有些則是孤身獨立，當牠們生活範圍重疊時，可能會發生衝突，因此造成傷亡，而除了同類相鬥之外，浪浪也可能遭受有心人士的報復或惡意傷害。<br><br>
+
+
+        </h4>
+
+        
+
+
+
+
+      </div>
+
+
+
+      <!-- ********************************************************** 領養大綱 **************************************************************** -->
+
+    <h4 class="stray-animal-problem">
+      雖然貓狗在臺灣常被視為擁有特殊待遇的一群，不只現行的法律常被質疑是否獨厚貓狗，甚至到了要立法限制吃食的程度；許多人對待動物的態度亦彷彿映證了所謂「愛動物」
+      多半僅侷限於自家寵物，部分飼主任由寵物在野外活動的行為，更讓關懷野生動物處境者憂心犬貓造成生態環境失衡。
+      <p>但對於關心流浪動物議題的人來說，臺灣流浪動物的處境。</p>
+      <p>多半僅侷限於自家寵物，部分飼主任由寵物在野外活動的行為，更讓關懷野生動物處境者憂心犬貓造成生態環境失衡。</p>
+    </h4>
+
+    <div class="outline  "> 
+      <h3>
+        <div class="outbtn w3-button" style="background-color: #ffdad5fe; margin-right: 15px;"><a href="#ready">
+          領養前注意</a><br>
+          <a href="#ready"><img src="img/ready-04.png" alt="領養前注意"></a>
+        </div>
+          
+        <div class="outbtn w3-button" style="background-color: #d3b7defe; margin-right: 15px;"><a href="#finish">
+          領養後注意</a><br>
+          <a href="#finish"><img src="img/finish-01.png" alt="領養前注意"></a>
+        </div> 
+          
+        <div class="outbtn w3-button" style="background-color: #ede5a8; margin-right: 15px;"><a href="#healthy">
+          貓狗健康檢查</a><br>
+          <a href="#healthy"><img src="img/healthy-02.png" alt="貓狗健康檢查"></a>
+        </div> 
+          
+        <div class="outbtn w3-button" style="background-color: #b7c8fd;"><a href="#food">
+          貓狗飲食</a><br>
+          <a href="#food"><img src="img/food-03.png" alt="領養前注意"></a>
+        </div> 
+      </h3>
+    </div> 
+    <!--******************************************************** 領養知識內容   *************************************************************** -->
+    <div class="stray-animal-problem">
+
+      <div id="ready">
+      <br  id="before"><br><br><br>
+        <div>
+          <h3 class="w3-center w3-jumbo" style="margin-bottom:64px">領養前注意</h3>
+          <h4>
+            雖然貓狗在臺灣常被視為擁有特殊待遇的一群，不只現行的法律常被質疑是否獨厚貓狗，甚至到了要立法限制吃食的程度；許多人對待動物的態度亦彷彿映證了所謂「愛動物」
+            多半僅侷限於自家寵物，部分飼主任由寵物在野外活動的行為，更讓關懷野生動物處境者憂心犬貓造成生態環境失衡。但對於關心流浪動物議題的人來說，臺灣流浪動物的處境，
+            或許會讓他們有完全不同的感受。
+            <p>但對於關心流浪動物議題的人來說，臺灣流浪動物的處境。</p>
+            <p>多半僅侷限於自家寵物，部分飼主任由寵物在野外活動的行為，更讓關懷野生動物處境者憂心犬貓造成生態環境失衡。</p>
+          </h4>
+          
+          <ul>
+            <li>阿貓阿狗</li>
+            <li>阿貓阿狗</li>
+            <li>阿貓阿狗</li>
+          </ul>
+          <img src="img/dog1.jpg" alt="領養前"></a>
+          <h4>
+            雖然貓狗在臺灣常被視為擁有特殊待遇的一群，不只現行的法律常被質疑是否獨厚貓狗，甚至到了要立法限制吃食的程度；許多人對待動物的態度亦彷彿映證了所謂「愛動物」
+            多半僅侷限於自家寵物，部分飼主任由寵物在野外活動的行為，更讓關懷野生動物處境者憂心犬貓造成生態環境失衡。但對於關心流浪動物議題的人來說，臺灣流浪動物的處境，
+            或許會讓他們有完全不同的感受。
+          </h4>
+        </div>
+      </div>
+
+      <div id="finish">
+        <br id="after"><br><br><br>
+        <h3 class="w3-center w3-jumbo" style="margin-bottom:64px">領養後注意</h3>
+        <h4>
+          <p>但對於關心流浪動物議題的人來說，臺灣流浪動物的處境。</p>
+          <p>多半僅侷限於自家寵物，部分飼主任由寵物在野外活動的行為，更讓關懷野生動物處境者憂心犬貓造成生態環境失衡。</p>
+          雖然貓狗在臺灣常被視為擁有特殊待遇的一群，不只現行的法律常被質疑是否獨厚貓狗，甚至到了要立法限制吃食的程度；許多人對待動物的態度亦彷彿映證了所謂「愛動物」
+          多半僅侷限於自家寵物，部分飼主任由寵物在野外活動的行為，更讓關懷野生動物處境者憂心犬貓造成生態環境失衡。但對於關心流浪動物議題的人來說，臺灣流浪動物的處境，
+          或許會讓他們有完全不同的感受。
+        </h4>
+        <img src="img/dog1.jpg" alt="領養前"></a>
+          <h4>
+            雖然貓狗在臺灣常被視為擁有特殊待遇的一群，不只現行的法律常被質疑是否獨厚貓狗，甚至到了要立法限制吃食的程度；許多人對待動物的態度亦彷彿映證了所謂「愛動物」
+            多半僅侷限於自家寵物，部分飼主任由寵物在野外活動的行為，更讓關懷野生動物處境者憂心犬貓造成生態環境失衡。但對於關心流浪動物議題的人來說，臺灣流浪動物的處境，
+            或許會讓他們有完全不同的感受。
+            <p>但對於關心流浪動物議題的人來說，臺灣流浪動物的處境。</p>
+            <p>多半僅侷限於自家寵物，部分飼主任由寵物在野外活動的行為，更讓關懷野生動物處境者憂心犬貓造成生態環境失衡。</p>
+          </h4>
+      </div>
+
+      <div id="healthy">
+        <br id="poor"><br><br><br>
+        <h3 class="w3-center w3-jumbo" style="margin-bottom:64px">貓狗健康檢查</h3>
+        <h4>
+          雖然貓狗在臺灣常被視為擁有特殊待遇的一群，不只現行的法律常被質疑是否獨厚貓狗，甚至到了要立法限制吃食的程度；許多人對待動物的態度亦彷彿映證了所謂「愛動物」
+          多半僅侷限於自家寵物，部分飼主任由寵物在野外活動的行為，更讓關懷野生動物處境者憂心犬貓造成生態環境失衡。但對於關心流浪動物議題的人來說，臺灣流浪動物的處境，
+          或許會讓他們有完全不同的感受。
+        </h4>
+        <img src="img/dog2.jpg" alt="領養前"></a>
+          <h4>
+            雖然貓狗在臺灣常被視為擁有特殊待遇的一群，不只現行的法律常被質疑是否獨厚貓狗，甚至到了要立法限制吃食的程度；許多人對待動物的態度亦彷彿映證了所謂「愛動物」
+            多半僅侷限於自家寵物，部分飼主任由寵物在野外活動的行為，更讓關懷野生動物處境者憂心犬貓造成生態環境失衡。但對於關心流浪動物議題的人來說，臺灣流浪動物的處境，
+            或許會讓他們有完全不同的感受。
+          </h4>
+      </div>
+
+      <div id="food">
+        <br id="eat"><br><br><br>
+        <h3 class="w3-center w3-jumbo" style="margin-bottom:64px">貓狗飲食</h3>
+        <h4>
+          雖然貓狗在臺灣常被視為擁有特殊待遇的一群，不只現行的法律常被質疑是否獨厚貓狗，甚至到了要立法限制吃食的程度；許多人對待動物的態度亦彷彿映證了所謂「愛動物」
+          多半僅侷限於自家寵物，部分飼主任由寵物在野外活動的行為，更讓關懷野生動物處境者憂心犬貓造成生態環境失衡。但對於關心流浪動物議題的人來說，臺灣流浪動物的處境，
+          或許會讓他們有完全不同的感受。
+        </h4>
+        <img src="img/dog3.jpg" alt="領養前"></a>
+          <h4>
+            雖然貓狗在臺灣常被視為擁有特殊待遇的一群，不只現行的法律常被質疑是否獨厚貓狗，甚至到了要立法限制吃食的程度；許多人對待動物的態度亦彷彿映證了所謂「愛動物」
+            多半僅侷限於自家寵物，部分飼主任由寵物在野外活動的行為，更讓關懷野生動物處境者憂心犬貓造成生態環境失衡。但對於關心流浪動物議題的人來說，臺灣流浪動物的處境，
+            或許會讓他們有完全不同的感受。
+          </h4>
+      </div>
+
+
+
+
+    </div>
+ 
+    <h4>
+      本人也是經過了深思熟慮，在每個日日夜夜思考這個問題。我想，把流浪動物的意義想清楚，對各位來說並不是一件壞事。把流浪動物輕鬆帶過，顯然並不適合。生活中，若流浪動物出現了，我們就不得不考慮它出現了的事實。我們需要淘汰舊有的觀念，流浪動物，到底應該如何實現。我們都很清楚，這是個嚴謹的議題。一般來講，我們都必須務必慎重的考慮考慮。若到今天結束時我們都還無法釐清流浪動物的意義，那想必我們昨天也無法釐清。面對如此難題，我們必須設想周全。
+
+      莎士比亞說過一句經典的名言，那腦袋裡的智慧，就像打火石裡的火花一樣，不去打它是不肯出來的。但願各位能從這段話中獲得心靈上的滋長。
+
+      可是，即使是這樣，流浪動物的出現仍然代表了一定的意義。世界上若沒有流浪動物，對於人類的改變可想而知。其實，若思緒夠清晰，那麼流浪動物也就不那麼複雜了。
+
+      如果別人做得到，那我也可以做到。問題的關鍵看似不明確，但想必在諸位心中已有了明確的答案。世界需要改革，需要對流浪動物有新的認知。
+    </h4>
+
+    </div>
+  </div>    
+</div>
+
+
+
+<!-- *************************************************************@footer ***************************************************************-->
+
+<div class="main-footer">
+	
+	<div class="conpyright">
+		Copyright &copy; 2022 銘傳大學 浪牠回家吧
+	</div>
+</div>
+
+<!--*********************************************************** script************************************************************** -->
+
+<!--********************************************************** 置頂button********************************************* -->
+<script>
+  $(function(){
+    $('#BackTop').click(function(){ 
+      $('html,body').animate({scrollTop:0}, 333);
+    });
+    $(window).scroll(function() {
+      if ( $(this).scrollTop() > 300 ){
+        $('#BackTop').fadeIn(222);
+      } else {
+        $('#BackTop').stop().fadeOut(222);
+      }
+    }).scroll();
+  });
+  </script>
+
+<!--******************************************************** 大照片1234 *********************************************-->
+<script>
+  function openImg(imgName) {
+    var i;
+    var x = document.getElementsByClassName("picture");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    document.getElementById(imgName).style.display = "block";
+  }
+
+
+// **********************************************************小照片button******************************************************************
+  $(function () {
+  $(".textcard li").click(function (e) {
+    e.preventDefault();
+    $(this).addClass("active").siblings().removeClass("active");
+  });
+});
+
+// <!--********************************************************** AOS********************************************* -->
+      AOS.init({
+        duration: 2000,
+      });
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

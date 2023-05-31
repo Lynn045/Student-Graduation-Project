@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>浪牠回家吧 | 我要領養</title>
+
+<!-- W3導覽列 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- 字體 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/cwtexyen.css">
+<link rel="stylesheet" href="https://fonts.google.com/specimen/Raleway?preview.text=01%2002%2003%2004&preview.text_type=custom#standard-styles">
+<!-- icon -->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" >
+<!-- font -->
+<!-- AOS動畫 -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+<style>
+    body,h1,h2,h3,h4,h5 {font-family: "cwTeXYen", sans-serif}
+</style>
+
+
+
+<style>
+@media screen and (min-width:768px){/*桌機介面*/  
+
+    /******************************************************** 導覽列******************************************************************************* */
+    .main-header {
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    right: 0;
+    top: 0%;
+    box-shadow: 0 5px 40px -15px;
+    z-index: 2;   /*東西在上面+這個 */
+    }
+    .nav_bar {
+    display: flex;
+    padding: 10px; 
+    margin-right: 120px   ;
+    letter-spacing: 0.3em ;
+    color: #303030;
+    }  
+    .nav_bar a{
+    text-decoration:none;
+    transition: .5s;
+    font-size: 17px;
+    font-family:Arial;
+    }
+    .nav_bar a:hover{
+        color: #fa9f84;
+    }
+    .container {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    }
+    .main-header img{
+    margin: 15px 150px;
+    }
+    .w3-bar {
+    display: flex;
+    }
+
+    .w3-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    }
+    .w3-bar span {
+      font-size: 2em;
+      font-size: 2em;
+      margin-left: 20px;
+    }
+
+    /* *****************************************************************容器********************************************************** */
+    .container {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 80px;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 100%;
+    max-width: 1140px;      /* // 隨螢幕尺寸而變，當螢幕尺寸 ≥ 1200px 時是 1140px。 */
+    }
+
+/* ****************************************************************  置頂button  ************************************************** */
+.toTop-arrow {
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	border-radius: 33%;
+	opacity: 0.6;
+	background: #000;
+	cursor: pointer;
+	position:fixed;
+	right: 1rem;
+	bottom: 1rem;
+	display: none;
+}
+.toTop-arrow::before, .toTop-arrow::after {
+	width: 18px;
+	height: 5px;
+	border-radius: 3px;
+	background: #fff3fd;
+	position: absolute;
+	content: "";
+}
+.toTop-arrow::before {
+	transform: rotate(-45deg) translate(0, -50%);
+	left: 0.5rem;
+}
+.toTop-arrow::after {
+	transform: rotate(45deg) translate(0, -50%);
+	right: 0.5rem;
+}
+.toTop-arrow:focus {outline: none;}
+/* ************************************************* 流浪動物卡片************************************************** */
+.stray-animals{
+    margin-top: 150px;
+    margin-left: 400px;
+    display: flex;
+    flex-wrap:wrap;
+    
+}
+.stray-card{
+    width: 220px;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.stray-card img{
+    width: 220px;
+}
+.stray-text{
+    margin-left: 0px;
+    padding-bottom: 8px;
+    font-size: 15px;
+}
+
+/* **********************************  dd *******/
+li{
+    list-style: none;
+}
+dl {
+    line-height: 1.8;
+}
+dt {
+    position: absolute;
+    padding-left: 10px;
+}
+li dl dd {
+    width: calc(100% - 4em - 22px);
+    white-space: pre-wrap;
+    margin-inline-start: 60px;
+}
+ul {
+    list-style: none;
+}
+
+  /* *******************************************************  搜尋  *************************************************** */
+  button, input, select, textarea {
+    color: #5A5A5A;
+    font: inherit;
+    margin: 0;
+    }
+
+    input {
+    line-height: normal;
+    }
+
+    textarea {
+    overflow: auto;
+    }
+
+    #container {
+    max-width: 100%;
+    margin: 60px auto;
+    position: relative;
+    }
+
+    form {
+    position:fixed;
+    width: 200px;
+    padding: 0px;
+    margin: 50px 0;
+    float: left;
+    margin-left: 80px;
+    margin-top: 130px;
+    }
+
+    input[type='variety'],[type='id'], [type='place'],[type='search'],[type='radio'], select, textarea {
+        background: none;
+        border: none;
+        border-bottom: solid 2px #474544;
+        color: #474544;
+        font-size: 1.000em;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin: 0em 0 1.875em 0;
+        padding: 0 0 0.875em 0;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    .place {
+        float: none;
+    }
+    .id {
+        float: none;
+    }
+   .variety {
+        float: none;
+    }
+    .sex{
+        float: left;
+        width: 45%;
+    }
+    .color{
+        float: right;
+        width: 45%;
+    }
+    .radio{
+        margin-top: 10px;
+        float: none;
+    }
+
+
+
+    textarea {
+        line-height: 150%;
+        height: 130px;
+        resize: none;
+        width: 100%;
+    }
+
+    .option{
+      color:#474544;
+    }
+
+
+    #form_button {
+    background: none;
+    border: solid 2px #474544;
+    color: #474544;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    padding: 15px 25px;
+    text-transform: uppercase;
+    margin-left: 20%;
+    }
+
+    #form_button:hover {
+    background: #474544;
+    color: #F2F3EB;
+    }
+
+       
+    }
+    /* ***********************************************  收藏  **************************************************************** */
+    .like-btn {
+    display: flex;
+    margin-left: 180px;
+    position: absolute;
+    }
+    .like-btn:active{
+    transform: scale(0.9, 0.9);
+    }
+    .like-btn.active{
+    animation: pop 0.6s 1;
+    }
+    .like-btn path {
+    fill: #767676;
+    }
+    .like-btn.active path{
+    fill: #ec3e3e;
+    }
+
+    .clone{
+    position: absolute;
+    animation: moveOutwards 0.9s 1;
+    opacity: 0;
+    }
+
+    @keyframes moveOutwards{
+    from {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    }
+
+
+
+
+
+
+
+
+  </style>
+
+
+</head>
+
+<body>
+
+/* <!-- 手機按鈕 --> */
+<input type="checkbox" name="" id="menu_control">
+<div class="item">    
+    <label for="menu_control" class="menu_btn">
+        <span>選單</span>
+    </label>
+</div>
+
+<!-- 手機按鈕 --> 
+<div class="main-header">
+    <div class="w3-container ">
+        <a href="#"><img src="img/浪-10.png" alt="loge"></a>
+        <nav><h5><b>
+            <div class="w3-bar">
+              <div class="nav_bar">
+                <a href="我要領養.html" class="w3-bar-item ">我要領養</a>
+                <a href="爆料.html" class="w3-bar-item ">爆料專區</a>
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button" style="font-size: 17.5px;font-family:Arial;">意 見 回 饋</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                        <a href="https://forms.gle/oJC2DeT1gdb2wfpg7" class="w3-bar-item ">會員回饋</a>
+                        <a href="https://docs.google.com/spreadsheets/d/1yBip4jbvibY0Wr7W4punanXS3C27ernKUiqJ9R7u5EU/edit?usp=sharing" class="w3-bar-item ">系統回應</a>
+                    </div>
+                </div>
+                <a href="知識小學堂.html" class="w3-bar-item ">領養須知</a>
+                <a href="動物醫院.html" class="w3-bar-item ">動物醫院</a>
+                <a href="關於我們.html" class="w3-bar-item ">關於我們</a>
+                <a href="登入.html" class="w3-bar-item ">登入/註冊</a>
+              </div>
+            </div>
+        </h5></b></nav>
+    </div>
+</div>
+
+<!-- *************************************************  置頂button  *************************************************** -->
+<button type="button" id="BackTop" class="toTop-arrow" title="回上面"></button>
+
+<!-- ************************************************ 查詢條件 ****************************************************-->
+<form action="#" method="post" id="contact_form">
+
+      
+    <select id="slt1" class="radio">
+        <option>種類</option>
+        <option value="#tab_1">犬</option>
+        <option value="#tab_2">貓</option>
+        <option value="#tab_3">其他</option>
+    </select>
+    
+    <div class="sex">
+        <label for="sex"></label>
+        <select><option>性別</option>
+            <option value="M">男</option>
+            <option value="F">女</option>
+        </select>
+      </div>
+
+      <div class="color">
+        <label for="color"></label>
+        <select><option>毛色</option>
+            <option>黃色</option><option>黑黃色</option><option>白黃色</option><option>黑色</option><option>黑白色</option><option>白色</option><option>咖啡色</option>
+        </select>
+      </div>
+
+      <div class="area">
+        <label for="area"></label>
+        <select><option>地區</option>
+            <option>臺北市</option><option>新北市</option><option>桃園市</option><option>臺中市</option><option>臺南市</option><option>高雄市</option><option>新竹縣</option>
+            <option>苗栗縣</option><option>彰化縣</option><option>南投縣</option><option>雲林縣</option><option>嘉義縣</option><option>屏東縣</option><option>宜蘭縣</option>
+            <option>花蓮縣</option><option>臺東縣</option><option>澎湖縣</option><option>金門縣</option><option>連江縣</option>
+        </select>
+      </div>
+
+      <div class="dog" id="tab_1">
+        <div class="variety">
+            <select><option>動物品種</option>
+                <option>混種狗</option><option>貴賓</option><option>柴犬</option><option>比特犬</option><option>米格魯</option><option>哈士奇</option><option>大白熊</option>
+            </select>
+        </div>
+      </div>
+
+      <div class="cat" id="tab_2">
+        <div class="variety">
+            <select><option>動物品種</option>
+                <option>混種貓</option><option>加菲貓</option><option>英國藍貓</option><option>英國短毛貓</option><option>美國短毛貓</option><option>波斯貓</option>
+            </select>
+        </div>
+      </div>
+
+      <div class="ites" id="tab_3">
+        <div class="variety">
+            <select><option>動物品種</option>
+                <option>鼠</option><option>蛇</option><option>兔</option><option>烏龜</option>
+            </select>
+        </div>
+      </div>
+
+
+<script>
+ $(function(){
+  //全部選擇隱藏
+  $('div[id^="tab_"]').hide();
+  $('#slt1').change(function(){
+    let sltValue=$(this).val();
+    console.log(sltValue);
+    
+    $('div[id^="tab_"]').hide();
+    //指定選擇顯示
+    $(sltValue).show();
+  });
+  
+});
+</script>
+      
+      
+    
+      <div class="place">
+        <label for="place"></label>
+        <select><option>收容所</option>
+          <option value="AAAAG">新北市政府動物保護防疫處</option><option value="AAACG">新北市新店區公立動物之家</option><option value="AAADG">新北市板橋區公立動物之家</option><option value="AAAEG">新北市中和區公立動物之家</option><option value="AAAFG">新北市淡水區公立動物之家</option><option value="AAAGG">新北市瑞芳區公立動物之家</option><option value="AAAHG">新北市五股區公立動物之家</option><option value="AAAIG">新北市八里區公立動物之家</option><option value="AAAJG">新北市三芝區公立動物之家</option><option value="BAAAG">宜蘭縣流浪動物中途之家</option><option value="CAAAG">桃園市動物保護教育園區</option><option value="DAAAG">新竹縣公立動物收容所</option><option value="EAAAG">苗栗縣生態保育教育中心</option><option value="FAAAG">臺中市動物之家南屯園區</option><option value="FAABG">臺中市動物之家后里園區</option><option value="GAAAG">彰化縣流浪狗中途之家</option><option value="HAAAG">南投縣公立動物收容所</option><option value="IAAAG">雲林縣流浪動物收容所</option><option value="JAAAG">嘉義縣流浪犬中途之家</option><option value="LAAAG">高雄市壽山動物保護教育園區</option><option value="LAABG">高雄市燕巢動物保護關愛園區</option><option value="MAAAG">屏東縣公立犬貓中途之家</option><option value="NAAAG">臺東縣動物收容中心</option><option value="OAAAG">花蓮縣狗貓躍動園區</option><option value="PAAAG">澎湖縣流浪動物收容中心</option><option value="QAAAG">基隆市寵物銀行</option><option value="RAAAG">新竹市動物保護教育園區</option><option value="TAAAG">嘉義市動物保護教育園區</option><option value="UAAAG">臺南市動物之家灣裡站</option><option value="UAABG">臺南市動物之家善化站</option><option value="VAAAG">臺北市動物之家</option><option value="XAAAG">連江縣流浪犬收容中心</option><option value="YAAAG">金門縣動物收容中心</option>
+        </select>
+      </div>
+    
+      <div class="id">
+        <label for="id"></label>
+        <input type="id" placeholder="收容編號" name="id" id="id_input" required>
+      </div>
+    
+    
+      <div class="search">
+        <label for="search"></label>
+        <textarea name="search" placeholder="進階搜尋" id="search_input" cols="30" rows="5" required></textarea>
+      </div>
+    
+      <div class="submit">
+        <input type="submit" value="查詢條件" id="form_button" />
+      </div>
+    </form>
+
+<!-- *************************************************  內容  *************************************************** --> 
+
+
+
+        <!-- *************************************************  領養狗狗卡片  **************************************************************** -->
+
+        <div class="stray-animals">
+
+            <div class="stray-card">
+                <!-- 照片 -->
+                <div class="stray-card-img">
+                    <img src="img/dog1.jpg" alt="">
+                </div>
+
+                <div class="stray-text">
+                    <a href="#" class="like-btn" title="收藏我吧" onclick="myFunction(this)">
+                        <svg class="like_icon"width="33" height="28" viewBox="0 0 44 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2C6.925 2 2 6.925 2 13C2 24 15 34 22 36.326C29 34 42 24 42 13C42 6.925 37.075 2 31 2C27.28 2 23.99 3.847 22 6.674C20.9857 
+                            5.22921 19.6382 4.05009 18.0715 3.23649C16.5049 2.42289 14.7653 1.99875 13 2Z"/>
+                        </svg>
+                    </a>
+                    <li>
+                        <dl>
+                            <dt>品種：</dt>
+                            <dd>柴犬</dd>
+                            <dt>性別：</dt>
+                            <dd>女</dd>
+                            <dt>毛色：</dt>
+                            <dd>黃</dd>
+                            <dt>我在：</dt>
+                            <dd>新北市新店區安泰路235號</dd>
+                            <dt>電話：</dt>
+                            <dd>02-22159462</dd>
+                            <dt>晶片：</dt>
+                            <dd>981020000978326</dd>
+                        </dl>
+                    </li>
+                    
+                </div>
+            </div>
+
+
+
+        <!-- ********************************************* -->
+            <div class="stray-card">
+                <!-- 照片 -->
+                <div class="stray-card-img">
+                    <img src="img/dog1.jpg" alt="">
+                </div>
+
+                <div class="stray-text">
+                    <a href="#" class="like-btn" title="收藏我吧" onclick="myFunction(this)">
+                        <svg class="like_icon"width="33" height="28" viewBox="0 0 44 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2C6.925 2 2 6.925 2 13C2 24 15 34 22 36.326C29 34 42 24 42 13C42 6.925 37.075 2 31 2C27.28 2 23.99 3.847 22 6.674C20.9857 
+                            5.22921 19.6382 4.05009 18.0715 3.23649C16.5049 2.42289 14.7653 1.99875 13 2Z"/>
+                        </svg>
+                    </a>
+                    <li>
+                        <dl>
+                            <dt>品種：</dt>
+                            <dd>柴犬</dd>
+                            <dt>性別：</dt>
+                            <dd>女</dd>
+                            <dt>毛色：</dt>
+                            <dd>黃</dd>
+                            <dt>我在：</dt>
+                            <dd>新北市新店區安泰路235號</dd>
+                            <dt>電話：</dt>
+                            <dd>02-22159462</dd>
+                            <dt>晶片：</dt>
+                            <dd>981020000978326</dd>
+                        </dl>
+                    </li>
+                    
+                </div>
+                <!-- ****************************************************** 收藏 *******************************************************-->
+
+            </div>
+
+            <div class="stray-card">
+                <!-- 照片 -->
+                <div class="stray-card-img">
+                    <img src="img/dog1.jpg" alt="">
+                </div>
+
+                <div class="stray-text">
+                    <a href="#" class="like-btn" title="收藏我吧" onclick="myFunction(this)">
+                        <svg class="like_icon"width="33" height="28" viewBox="0 0 44 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2C6.925 2 2 6.925 2 13C2 24 15 34 22 36.326C29 34 42 24 42 13C42 6.925 37.075 2 31 2C27.28 2 23.99 3.847 22 6.674C20.9857 
+                            5.22921 19.6382 4.05009 18.0715 3.23649C16.5049 2.42289 14.7653 1.99875 13 2Z"/>
+                        </svg>
+                    </a>
+                    <li>
+                        <dl>
+                            <dt>品種：</dt>
+                            <dd>柴犬</dd>
+                            <dt>性別：</dt>
+                            <dd>女</dd>
+                            <dt>毛色：</dt>
+                            <dd>黃</dd>
+                            <dt>我在：</dt>
+                            <dd>新北市新店區安泰路235號</dd>
+                            <dt>電話：</dt>
+                            <dd>02-22159462</dd>
+                            <dt>晶片：</dt>
+                            <dd>981020000978326</dd>
+                        </dl>
+                    </li>
+                    
+                </div>
+        
+            </div>
+
+            <div class="stray-card">
+                <!-- 照片 -->
+                <div class="stray-card-img">
+                    <img src="img/dog1.jpg" alt="">
+                </div>
+                
+                <div class="stray-text">
+                    <a href="#" class="like-btn" title="收藏我吧" onclick="myFunction(this)">
+                        <svg class="like_icon"  width="33" height="28" viewBox="0 0 44 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2C6.925 2 2 6.925 2 13C2 24 15 34 22 36.326C29 34 42 24 42 13C42 6.925 37.075 2 31 2C27.28 2 23.99 3.847 22 6.674C20.9857 
+                            5.22921 19.6382 4.05009 18.0715 3.23649C16.5049 2.42289 14.7653 1.99875 13 2Z"/>
+                        </svg>
+                    </a>
+                    <li>
+                        <dl>
+                            <dt>品種：</dt>
+                            <dd>柴犬</dd>
+                            <dt>性別：</dt>
+                            <dd>女</dd>
+                            <dt>毛色：</dt>
+                            <dd>黃</dd>
+                            <dt>我在：</dt>
+                            <dd>新北市新店區安泰路235號</dd>
+                            <dt>電話：</dt>
+                            <dd>02-22159462</dd>
+                            <dt>晶片：</dt>
+                            <dd>981020000978326</dd>
+                        </dl>
+                    </li>
+                    
+                </div>
+            
+            </div>
+
+
+            <!-- ********************************************* -->
+            <div class="stray-card">
+                <!-- 照片 -->
+                <div class="stray-card-img">
+                    <img src="img/dog1.jpg" alt="">
+                </div>
+
+                <div class="stray-text">
+                    <a href="#" class="like-btn" title="收藏我吧" onclick="myFunction(this)">
+                        <svg class="like_icon"width="33" height="28" viewBox="0 0 44 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2C6.925 2 2 6.925 2 13C2 24 15 34 22 36.326C29 34 42 24 42 13C42 6.925 37.075 2 31 2C27.28 2 23.99 3.847 22 6.674C20.9857 
+                            5.22921 19.6382 4.05009 18.0715 3.23649C16.5049 2.42289 14.7653 1.99875 13 2Z"/>
+                        </svg>
+                    </a>
+                    <li>
+                        <dl>
+                            <dt>品種：</dt>
+                            <dd>柴犬</dd>
+                            <dt>性別：</dt>
+                            <dd>女</dd>
+                            <dt>毛色：</dt>
+                            <dd>黃</dd>
+                            <dt>我在：</dt>
+                            <dd>新北市新店區安泰路235號</dd>
+                            <dt>電話：</dt>
+                            <dd>02-22159462</dd>
+                            <dt>晶片：</dt>
+                            <dd>981020000978326</dd>
+                        </dl>
+                    </li>
+                    
+                </div>
+                            <!-- ********************************************* -->
+            <div class="stray-card">
+                <!-- 照片 -->
+                <div class="stray-card-img">
+                    <img src="img/dog1.jpg" alt="">
+                </div>
+
+                <div class="stray-text">
+                    <a href="#" class="like-btn" title="收藏我吧" onclick="myFunction(this)">
+                        <svg class="like_icon"width="33" height="28" viewBox="0 0 44 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2C6.925 2 2 6.925 2 13C2 24 15 34 22 36.326C29 34 42 24 42 13C42 6.925 37.075 2 31 2C27.28 2 23.99 3.847 22 6.674C20.9857 
+                            5.22921 19.6382 4.05009 18.0715 3.23649C16.5049 2.42289 14.7653 1.99875 13 2Z"/>
+                        </svg>
+                    </a>
+                    <li>
+                        <dl>
+                            <dt>品種：</dt>
+                            <dd>柴犬</dd>
+                            <dt>性別：</dt>
+                            <dd>女</dd>
+                            <dt>毛色：</dt>
+                            <dd>黃</dd>
+                            <dt>我在：</dt>
+                            <dd>新北市新店區安泰路235號</dd>
+                            <dt>電話：</dt>
+                            <dd>02-22159462</dd>
+                            <dt>晶片：</dt>
+                            <dd>981020000978326</dd>
+                        </dl>
+                    </li>
+                    
+                </div>
+                <!-- ********************************************* -->
+            <div class="stray-card">
+                <!-- 照片 -->
+                <div class="stray-card-img">
+                    <img src="img/dog1.jpg" alt="">
+                </div>
+
+                <div class="stray-text">
+                    <a href="#" class="like-btn" title="收藏我吧" onclick="myFunction(this)">
+                        <svg class="like_icon"width="33" height="28" viewBox="0 0 44 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 2C6.925 2 2 6.925 2 13C2 24 15 34 22 36.326C29 34 42 24 42 13C42 6.925 37.075 2 31 2C27.28 2 23.99 3.847 22 6.674C20.9857 
+                            5.22921 19.6382 4.05009 18.0715 3.23649C16.5049 2.42289 14.7653 1.99875 13 2Z"/>
+                        </svg>
+                    </a>
+                    <li>
+                        <dl>
+                            <dt>品種：</dt>
+                            <dd>柴犬</dd>
+                            <dt>性別：</dt>
+                            <dd>女</dd>
+                            <dt>毛色：</dt>
+                            <dd>黃</dd>
+                            <dt>我在：</dt>
+                            <dd>新北市新店區安泰路235號</dd>
+                            <dt>電話：</dt>
+                            <dd>02-22159462</dd>
+                            <dt>晶片：</dt>
+                            <dd>981020000978326</dd>
+                        </dl>
+                    </li>
+                    
+                </div>
+                <!-- ****************************************************** 收藏 *******************************************************-->
+
+            </div>
+            
+          </div>
+        
+
+
+
+
+
+
+
+
+
+<script>
+    // ***********************************************************  收藏  *******************************************************
+
+    function myFunction(x) {
+    x.classList.toggle("active");
+}
+
+// // *********************************************************
+//         let button = document.querySelector(".like-btn");
+//         let icon = document.querySelector(".like_icon");
+
+//         button.addEventListener("click", ()=>{
+//         button.classList.toggle("active");
+//         if(button.classList.contains("active")){
+//             createClones(button);
+//         }
+//         });
+
+//         function randomNum(min, max) {
+//         return Math.floor(Math.random()*(max- min + 1 )+ min);
+//         }
+
+//         function negativePositve() {
+//         return Math.random() <0.5 ? -1 : 1;
+//         }
+
+//         function createClones(button) {
+//         let numberOfClones = randomNum(2, 4);
+
+//         for(let i=1; i<= numberOfClones; i++) {
+//             let clone = icon.cloneNode(true);
+//             let size = randomNum(8, 20);
+//             button.appendChild(clone);
+//             clone.setAttribute("width", size);
+//             clone.setAttribute("height", size);
+//             clone.classList.add("clone");
+//             clone.style.transform = 
+//             "translate(" + 
+//             negativePositve() * randomNum(15, 30) + "px," +
+//             negativePositve() * randomNum(15, 30) + "px)";
+
+//             let removeNode = setTimeout(() =>{
+//             button.removeChild(clone);
+//             clearTimeout(removeNode);
+//             }, 800);
+//         }
+//         }
+
+</script>
+
+
+
+
+</body>
+
+</html>

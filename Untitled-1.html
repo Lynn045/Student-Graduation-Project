@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>浪牠回家吧 | 文章內容</title>
+
+
+
+
+<!-- W3導覽列 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- 字體 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/cwtexyen.css">
+<link rel="stylesheet" href="https://fonts.google.com/specimen/Raleway?preview.text=01%2002%2003%2004&preview.text_type=custom#standard-styles">
+<!-- icon -->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" >
+
+<!-- AOS動畫 -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+
+<!-- ***********************************************  內文  ************************************************* -->
+<select id="slt1" class="form-control">
+  <option>種類</option>
+  <option value="#tab_1">犬</option>
+  <option value="#tab_2">貓</option>
+  <option value="#tab_3">其他</option>
+</select>
+
+<ul class="radio">
+  <li><label><input type="radio" value="#tab_1"><span style="color: #474544 ;"> 犬</span></label></li>
+  <li><label><input type="radio" value="#tab_2"><span style="color: #474544 ;"> 貓</span></label></li>
+  <li><label><input type="radio" value="#tab_3"><span style="color: #474544 ;"> 其他</span></label></li>
+</ul>
+
+<div class="variety A-4" id="tab_1">
+
+  <select><option>動物品種</option>
+      <option>混種狗</option><option>貴賓</option><option>柴犬</option><option>比特犬</option><option>米格魯</option><option>哈士奇</option><option>大白熊</option>
+  </select>
+
+</div>
+
+<div class="variety A-5" id="tab_2">
+
+  <select><option>動物品種</option>
+      <option>混種狗</option><option>貴賓</option><option>柴犬</option><option>比特犬</option><option>米格魯</option><option>哈士奇</option><option>大白熊</option>
+  </select>
+
+</div>
+
+
+
+
+<script>
+  $(function(){
+  //全部選擇隱藏
+  $('#slt1').change(function(){
+    let sltValue=$(this).val();
+    console.log(sltValue);
+    
+    $('div[id^="tab_"]').hide();
+    //指定選擇顯示
+    $(sltValue).show();
+  });
+  
+});
+</script>
+
+</body>
+
+
+</html>

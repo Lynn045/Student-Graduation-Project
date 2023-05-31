@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="slide.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <!-- 字體 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/cwtexyen.css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Raleway?preview.text=01%2002%2003%2004&preview.text_type=custom#standard-styles">
+    <!-- 字體 -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/cwtexyen.css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Raleway?preview.text=01%2002%2003%2004&preview.text_type=custom#standard-styles">
+    <title>浪牠回家吧 | 登入/註冊</title>
+
+    <style>
+        body,h1,h2,h3,h4,h5 {
+          font-family: "cwTeXYen", sans-serif;}
+      </style>
+<style>
+
+    @media screen and (min-width:768px){
+        .menu_btn{display: none;}
+
+
+
+        .home{
+            margin-top: 19px;
+            margin-left: 169px;
+           padding: 3px;
+            transition: .3s;
+        }
+    body{
+        background-color: #ececec;
+    }
+    .card{
+        width: 1100px;
+        height: 620px;
+        margin: auto;
+        margin-top: 9px;
+        border-radius: 4px;
+        box-shadow: 3px 1px 5px  #d6d2d3;
+
+    }
+
+    .card .img img{
+        width:640px; height:620px;
+        filter: grayscale(0);
+        float: left;
+        border: none;
+        margin-left:-1px ;
+        margin-top: -1px;
+        position: relative;
+        border-radius: 4px;
+    }
+    .register{
+        width:auto;
+        height:620px;
+        border: none;
+        background-color: #cdcdcd;
+        box-shadow: 1px 0px 0.2px 0.3px #d6d2d3;
+        /* backdrop-filter: blur(2px); 模糊化 (吃效能) */
+        display: flex;
+        justify-content:center ;
+        align-items: center; 
+        margin:-1px ;
+        border-radius: 4px;
+        
+        
+        
+        
+    }
+
+    .form{
+        color: rgb(102, 106, 111);
+        width: 70%;
+    }
+
+    .form h2{
+        margin-bottom: 8px;
+        padding-bottom:1x ;
+        font-weight: 500;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        
+        
+    }
+    .form .group{
+        margin-bottom: 11px;
+    }
+    .form label{
+        line-height: 0.5;
+
+    }
+    .form input{
+        width: 100%;
+        border: none;
+        line-height: 2;
+        border-radius: 2px;
+    }
+    .form .btn-group{
+       margin-left :80px;
+        margin-top: -10px;
+    }
+    .form .btn{
+        font-size: 20px;
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.8);
+        width:140px;
+        padding: 6px 3px;
+        margin-top: 10px;
+        opacity: 0.5;
+        
+    }
+    .select select{
+        color: rgb(102, 106, 111);
+            border: none;
+            background-color: #fff;
+            float: left;
+            margin: 20px ;
+            
+            font-size: 20px;
+            text-align: center;
+            border-radius: 2px;
+            width: 35%;
+            height: 33px;
+            margin-left: 0px;
+    }
+    .select2 select{
+        color: rgb(102, 106, 111);
+            border: none;
+            background-color: #fff;
+            float: right;
+            margin: 20px ;
+            
+            font-size: 20px;
+            text-align: center;
+            border-radius: 2px;
+            width: 35%;
+            height: 33px;
+      
+    }
+    .form .btn:hover{
+        background-color: #414141cd;
+        font-weight: 600;
+    }
+
+    .btn-group a{
+
+        color: black;
+    }
+
+    .login{
+        color: #ffffff;
+        background-color: rgba(48, 48, 48, 0.8);
+        position: absolute;
+        width: 77px;
+        height: 34px;
+        z-index: 1;
+        margin-left:-620px ;
+        margin-top: 570px;
+        text-decoration: none;
+        text-align: center;
+        padding-top: 2px;
+        border-radius: 3px;
+        font-size: 20px;
+        transition: .2s;
+        box-shadow: 1px 0 8px  rgb(41, 37, 37);
+    }
+    .login:hover{
+        background-color: #414141cd;
+        color: rgb(214, 221, 227);;
+        box-shadow: 1px 0 8px  rgb(41, 37, 37);
+    }
+
+
+}
+</style>
+
+
+
+
+
+<body>
+
+    <div class="home">
+        <a href="我要領養.html"><img src="img/浪-10.png" alt=""></a>
+    </div>
+
+
+   <div class="card">
+
+        <div class="img">
+            <img src="img/login.jpg" >
+            <a href="登入.html" class="login"><b>登入</b></a>
+            <div class="register" >
+                <form class="form" onsubmit="alert('註冊成功!');">
+
+                    <h2>會員申請</h2>
+                    <div class="group">
+                        <label for="user_id">帳號</label>
+                        <input type="text" required placeholder="6至12數字或英文" pattern="[0-9a-zA-Z]{6,12}"  id="user_id">
+                    </div>
+                    <div class="group">
+                        <label for="user_password">密碼</label>
+                        <input type="password" required placeholder="6至16數字或英文" pattern="[0-9a-zA-Z]{6,16}" id="user_password">
+                    </div>
+                    <div class="group">
+                        <label for="name">姓名</label> 
+                        <input type="text"  id="name" maxlength="15" placeholder="可輸入暱稱" name="name"  >
+                    </div>
+                    <div class="group">
+                        <label for="user_id" >電子郵件</label>
+                        <input type="email" id="email" placeholder="請輸入正確格式" required />
+                    </div>
+                    <div class="group">
+                        <label for="user_id">居住縣市</label>
+                        <input type="text"  id="address" name="address" placeholder="例 : 台北市">
+                    </div>
+                    <div class="group">
+                        <label for="user_id">手機號碼</label>
+                        <input type="text" required pattern="[0-9]{10}" id="user_id">
+                    </div>
+
+                    <div class="select">
+                        <select id="selec">
+                            <option>年齡</option>
+                            <option>20歲以下</option>
+                            <option>21~64歲</option>
+                            <option>65歲以上</option>
+                        </select>
+                    </div>
+                    <div class="select2">
+                        <select >
+                            <option>性別</option>
+                            <option>男性</option>
+                            <option>女性</option>
+                            <option>其他</option>
+                        </select>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn">送出</button>
+                    </div>
+                </form>
+            </div>
+   </div>
+</body>
+</html>

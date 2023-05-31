@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>浪牠回家吧 | 關於我們</title>
+
+<!-- W3導覽列 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- 字體 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/cwtexyen.css">
+<link rel="stylesheet" href="https://fonts.google.com/specimen/Raleway?preview.text=01%2002%2003%2004&preview.text_type=custom#standard-styles">
+<!-- icon -->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" >
+<!-- font -->
+<!-- AOS動畫 -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+<style>
+    body,h1,h2,h3,h4,h5 {font-family: "cwTeXYen", sans-serif}
+</style>
+
+
+
+<style>
+@media screen and (min-width:768px){/*桌機介面*/  
+
+    /******************************************************** 導覽列******************************************************************************* */
+    .main-header {
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    right: 0;
+    top: 0%;
+    box-shadow: 0 5px 40px -15px;
+    z-index: 2;   /*東西在上面+這個 */
+    }
+    .nav_bar {
+    display: flex;
+    padding: 10px; 
+    margin-right: 120px   ;
+    letter-spacing: 0.3em ;
+    color: #303030;
+    }  
+    .nav_bar a{
+    text-decoration:none;
+    transition: .5s;
+    font-size: 17px;
+    font-family:Arial;
+    }
+    .nav_bar a:hover{
+        color: #fa9f84;
+    }
+    .container {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    }
+    .main-header img{
+    margin: 15px 150px;
+    }
+    .w3-bar {
+    display: flex;
+    }
+
+    .w3-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    }
+    .w3-bar span {
+        font-size: 2em;
+        margin-left: 20px;
+    }
+
+    /* *****************************************************************容器********************************************************** */
+    .container {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 80px;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 100%;
+    max-width: 1140px;      /* // 隨螢幕尺寸而變，當螢幕尺寸 ≥ 1200px 時是 1140px。 */
+    }
+    .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    }
+    .col {
+    position: relative;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    }
+/* ****************************************************************  置頂button  ************************************************** */
+.toTop-arrow {
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	border-radius: 33%;
+	opacity: 0.6;
+	background: #000;
+	cursor: pointer;
+	position:fixed;
+	right: 1rem;
+	bottom: 1rem;
+	display: none;
+}
+.toTop-arrow::before, .toTop-arrow::after {
+	width: 18px;
+	height: 5px;
+	border-radius: 3px;
+	background: #fff3fd;
+	position: absolute;
+	content: "";
+}
+.toTop-arrow::before {
+	transform: rotate(-45deg) translate(0, -50%);
+	left: 0.5rem;
+}
+.toTop-arrow::after {
+	transform: rotate(45deg) translate(0, -50%);
+	right: 0.5rem;
+}
+.toTop-arrow:focus {outline: none;}
+/* **************************************************************  contact us 內文   ********************************************/
+.Contact-title{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+
+/* ****************************************************************  人員介紹  ************************************************** */
+    .people-about{
+        width: 74.99997%;
+        margin-left: 10%;
+        margin-top: 80px;
+        display: flex;
+        margin-bottom: 200px;
+    }
+    .people-about img{
+        width: 400px;
+        transform: translateZ(0);
+    }
+    .introduce{
+        width: 100%;
+        margin-right: 0px;
+        padding-left: 100px;
+        margin-top: 120px;
+        align-self: center;
+    }
+    .name1{
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    .first-name{
+        letter-spacing: .05em;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .en-name{
+        align-self: center;
+        letter-spacing: .05em;
+        margin-left: 20px;
+        font-size: 11px;       
+        font-weight: 600; 
+    }
+    .job{
+        margin-top: 0px;
+        font-size: 13.5px;
+    }
+    .job-profile{
+        margin-top: 25px;
+        margin-bottom: 0px;
+        font-size: 15px;
+        font-feature-settings: "palt";
+    }
+
+/* **************************************  contact us  **************************************** */
+    button, input, select, textarea {
+    color: #5A5A5A;
+    font: inherit;
+    margin: 0;
+    }
+
+    input {
+    line-height: normal;
+    }
+
+    textarea {
+    overflow: auto;
+    }
+
+    #container {
+    max-width: 100%;
+    margin: 60px auto;
+    position: relative;
+    }
+
+    form {
+    width: 500px;
+    padding: 0px;
+    margin: 50px 0;
+    float: right;
+    margin-right: 50px;
+    }
+
+    .us{
+    padding: 37.5px;
+    margin: 20px 0;
+    float: left;
+    margin-left: 100px;
+    font-family: 'Helvetica', Arial, sans-serif;
+    }
+    .us p{
+    line-height: 1.5;
+    letter-spacing: .05em;
+    font-size: 16px;
+    }
+
+    h1 {
+    color: #474544;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    }
+    h4{
+    color: #474544;
+    font-weight: 700;
+    letter-spacing: 7px;
+    text-align: center;
+    text-transform: uppercase;
+    }
+
+    .underline {
+    border-bottom: solid 2px #474544;
+    margin-left: 480px;
+    width: 150px;
+    margin-bottom: 20px;
+    }
+
+    input[type='text'], [type='email'], select, textarea {
+        background: none;
+        border: none;
+        border-bottom: solid 2px #474544;
+        color: #474544;
+        font-size: 1.000em;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin: 0em 0 1.875em 0;
+        padding: 0 0 0.875em 0;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    .message {
+        float: none;
+    }
+    .name {
+        float: none;
+        width: 45%;
+    }
+    .email {
+        float: none;
+        width: 100%;
+    }
+    .subject {
+    width: 100%;
+    }
+
+
+    #form_button {
+    background: none;
+    border: solid 2px #474544;
+    color: #474544;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    padding: 20px 35px;
+    text-transform: uppercase;
+    }
+
+    #form_button:hover {
+    background: #474544;
+    color: #F2F3EB;
+    }
+
+/* *******************************  footer *********************************************/
+/* 頁尾設定 */
+footer{
+	font-size:14px;
+	font-weight: 200;
+    line-height: 1em;
+    
+}
+
+/* 著作權資訊 */
+.copyright {
+    background-color: #474544;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+}
+
+
+
+
+  </style>
+
+
+</head>
+
+<body>
+
+ <!-- 手機按鈕 --> 
+<input type="checkbox" name="" id="menu_control">
+<div class="item">    
+    <label for="menu_control" class="menu_btn">
+        <span>選單</span>
+    </label>
+</div>
+
+<!-- 手機按鈕 --> 
+<div class="main-header">
+    <div class="w3-container ">
+        <a href="#"><img src="img/浪-10.png" alt="loge"></a>
+        <nav><h5><b>
+            <div class="w3-bar">
+              <div class="nav_bar">
+                <a href="我要領養.html" class="w3-bar-item ">我要領養</a>
+                <a href="知識小學堂.html" class="w3-bar-item ">領養須知</a>
+                <a href="爆料.html" class="w3-bar-item ">爆料專區</a>
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button" style="font-size: 17px;font-family:Arial;">意 見 回 饋</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                        <a href="https://forms.gle/oJC2DeT1gdb2wfpg7" class="w3-bar-item ">會員回饋</a>
+                        <a href="https://docs.google.com/spreadsheets/d/1yBip4jbvibY0Wr7W4punanXS3C27ernKUiqJ9R7u5EU/edit?usp=sharing" class="w3-bar-item ">系統回應</a>
+                    </div>
+                </div>
+                <a href="動物醫院.html" class="w3-bar-item ">動物醫院</a>
+                <a href="關於我們.html" class="w3-bar-item ">關於我們</a>
+                <a href="登入.html" class="w3-bar-item ">登入/註冊</a>
+              </div>
+            </div>
+        </h5></b></nav>
+    </div>
+</div>
+
+<!-- *************************************************  內容  *************************************************** --> 
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+
+<!--************************************************************* 關於我們************************************************ -->
+
+<h1>&bull; 關於我們 &bull;</h1>
+<h4> About Us </h4>
+
+
+
+<!-- /* ****************************************************************  人員介紹  ************************************************** */ -->
+<button type="button" id="BackTop" class="toTop-arrow"></button>
+<script>
+$(function(){
+	$('#BackTop').click(function(){ 
+		$('html,body').animate({scrollTop:0}, 333);
+	});
+	$(window).scroll(function() {
+		if ( $(this).scrollTop() > 300 ){
+			$('#BackTop').fadeIn(222);
+		} else {
+			$('#BackTop').stop().fadeOut(222);
+		}
+	}).scroll();
+});
+</script>
+
+
+<!-- *********************************************************  介紹人員  ********************************************************* -->
+
+<section class="people-about" data-aos="fade-right">
+    <img src="img/柏.jpg" alt="柏勻">
+    <div class="introduce">
+        <div class="name1">
+            <h3 class="first-name">
+                <span>陳柏勻</span> 
+            </h3>
+            <h3 class="en-name">
+                <span>Chen Bo-Un</span> 
+            </h3>
+            
+        </div>
+        <p class="job">
+            <span>前端工程師 / Front - End  Developer </span>
+        </p>
+        <p class="job-profile">
+            <span>
+                哎呀!我是一位美感不及格的前端工程師，好幾次設計出來的頁面都被打槍，以至於我基本上是先經過美術擔當的侯采綾組員先設計好介面外觀，然後我再以前端的方式呈現於網頁。
+            </span>
+        </p>
+    </div>
+</section>
+<section class="people-about" data-aos="fade-left">
+    <img src="img/采.jpg" alt="采綾">
+    <div class="introduce">
+        <div class="name1">
+            <h3 class="first-name">
+                <span>侯采綾</span>
+            </h3>
+            <h3 class="en-name">
+                <span>HOU CAI-LING</span> 
+            </h3>
+        </div>
+        <p class="job">
+            <span>前端工程師 / Front - End  Developer </span>
+        </p>
+        <p class="job-profile">
+            <span>
+                嗨一大家好,我是浪牠回家吧的前端兼美感設計人員，我就像一個老媽子催促著大家啊啊啊！<br>
+                譬如柏勻組員的美感慘不忍睹，這時昀葦吉祥物就會讓我舒緩許多<br>
+                組員間的配合真是天衣無縫。❤️
+            </span>
+        </p>
+    </div>
+</section>
+
+<section class="people-about" data-aos="fade-right">
+    <img src="img/昀.jpg" alt="昀葦">
+    <div class="introduce">
+        <div class="name1">
+            <h3 class="first-name">
+                <span>林昀葦</span>
+            </h3>
+            <h3 class="en-name">
+                <span>Lin Yun-Wei</span> 
+            </h3>
+        </div>
+        <p class="job">
+            <span>打雜工程師 / Gofer  Developer </span>
+        </p>
+        <p class="job-profile">
+            <span>
+                我是本專研小組負責舒緩侯采綾的吉祥物兼小仙女🌸<br>
+                平時沒事就喜歡看狗狗貓貓的小短片🐾<br>
+                未來有能力的話立志養一隻臺灣土狗！🐕‍🦺<br>
+                （僅限黑狗呦❤️）
+            </span>
+        </p>
+    </div>
+</section>
+<section class="people-about" data-aos="fade-left">
+    <img src="img/思.jpg" alt="思雅">
+    <div class="introduce">
+        <div class="name1">
+            <h3 class="first-name">
+                <span>陳思雅</span>
+            </h3>
+            <h3 class="en-name">
+                <span>CHEN SI-YA</span> 
+            </h3>
+        </div>
+        <p class="job">
+            <span>後端工程師 / Back - End  Developer </span>
+        </p>
+        <p class="job-profile">
+            <span>
+                我們的後端資料庫管理人員，熱情的高雄人，通勤仔(才不是<br>
+                主題曲是海波浪，自稱小郭靜<br>
+                超級愛貓人士，最喜歡橘白色、身材苗條、叫聲輕聲細語，以下省略...的貓咪。🐈🐕😍
+            </span>
+        </p>
+    </div>
+</section>
+   
+    
+
+<hr style="border-bottom: solid 1px #a3a39f;">
+
+
+
+
+<!-- *********************************************  contact us 填寫聯絡資訊 ***************************************************-->
+
+    <div class="contact">
+      <h1>&bull; 與我們聯絡 &bull;</h1>
+      <h4> Contact Us </h4>
+      <div class="underline">
+      </div>
+
+  
+      <div class="us"> 
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+        </svg>桃園市龜山區大同里德明路 5 號</p>
+  
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>03-350-7001 轉 3320</p>
+  
+        <p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+          <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+        </svg>test123@test.com</p>
+  
+          <!-- FB -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"viewBox="0 0 24 24"style=" fill:#000000; margin: 2px">
+            <a href="">
+            <path d="M17,3H7C4.791,3,3,4.791,3,7v10c0,2.209,1.791,4,4,4h5.621v-6.961h-2.343v-2.725h2.343V9.309 c0-2.324,1.421-3.591,3.495-3.591c0.699-0.002,1.397,0.034,2.092,0.105v2.43h-1.428c-1.13,0-1.35,0.534-1.35,1.322v1.735h2.7 l-0.351,2.725h-2.365V21H17c2.209,0,4-1.791,4-4V7C21,4.791,19.209,3,17,3z"></path></a>
+          </svg>
+  
+          <!-- IG -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"viewBox="0 0 24 24"style=" fill:#000000; margin: 2px"> 
+            <a href="">   
+           <path d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z">
+           </a></path></svg>
+      </div>
+  
+  
+      <!-- *********************  填寫聯絡資訊表單  ************************** -->
+      <form action="#" method="post" id="contact_form">
+
+        <div class="name">
+          <label for="name"></label>
+          <input type="text" placeholder="你的名字" name="name" id="name_input" required>
+        </div>
+
+        <div class="email">
+          <label for="email"></label>
+          <input type="email" placeholder="你的信箱" name="email" id="email_input" required>
+        </div>
+
+        <div class="message">
+          <label for="message"></label>
+          <textarea name="message" placeholder="想說些什麼..." id="message_input" cols="" rows="5" required></textarea>
+        </div>
+
+        <div class="submit">
+          <input type="submit" value="寄出留言" id="form_button" />
+        </div>
+      </form>
+    </div>
+  
+
+        </div>
+    </div>
+</div>
+
+<!-- *********************************   footer   ********************************** -->
+<footer>
+
+    <p class="copyright"><small>&copy; Copyright 2022 銘傳大學資訊傳播工程學系</small></p>
+  
+</footer>
+
+
+<script>
+//  <!--********************************************************** AOS********************************************* -->
+      AOS.init({
+        duration: 2000,
+      });
+
+
+
+
+
+      
+
+</script>
+
+
+
+</body>
+
+</html>

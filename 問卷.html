@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<title>浪牠回家 | 領養問卷</title>
+
+<!-- W3導覽列 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- 字體 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/cwtexyen.css">
+<link rel="stylesheet" href="https://fonts.google.com/specimen/Raleway?preview.text=01%2002%2003%2004&preview.text_type=custom#standard-styles">
+
+<style>
+    body,h1,h2,h3,h4,h5 {font-family: ‘cwTeXYen’, sans-serif;}
+</style>
+
+<style> 
+
+		/* 導覽列********************************************************************************************************************* */
+		.main-header {
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    right: 0;
+    top: 0%;
+    box-shadow: 0 5px 40px -15px;
+    z-index: 2;   /*東西在上面+這個 */
+    }
+    .nav_bar {
+    display: flex;
+    padding: 10px; 
+    margin-right: 120px   ;
+    letter-spacing: 0.3em ;
+    color: #303030;
+    }  
+    .nav_bar a{
+    text-decoration:none;
+    transition: .5s;
+    font-size: 17px;
+    font-family:Arial;
+    }
+    .nav_bar a:hover{
+        color: #fa9f84;
+    }
+    .container {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    }
+    .main-header img{
+    margin: 15px 150px;
+    }
+    .w3-bar {
+    display: flex;
+    }
+
+    .w3-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    }
+    .w3-bar span {
+        font-size: 2em;
+        margin-left: 20px;
+    }
+		/* 導覽列終點********************************************************************************************************************* */
+
+		.controls {
+		display: flex;
+			}
+			input[type=submit] {
+            border-radius: 3px;
+            width: 50px;
+            height:20px;
+            font-family: monospace;
+            background: #ffc773ef;     
+        }
+		/* 問卷內容*************************************************************************************************************************/
+		.shadowbox {
+		padding: 30px 12px;
+		width: 1200px;
+		margin-top: 30px;
+		margin:0 auto;
+        }
+		.radio {
+		flex: 1 0 auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 10px;
+		font-size:16px;
+		}
+		.qscard{
+			width: 1150px;
+			height: auto;
+			margin:30px auto;
+			padding: 10px;
+			box-shadow: 5px 5px 5px 8px #8b8a8a ;
+			background-color: rgb(247, 222, 222);
+			border-radius:5px
+		}
+		.qscard1{
+			width: 1150px;
+			height: auto;
+			margin:25px auto;
+			margin-top: 50px;
+			padding: 10px;
+			box-shadow: 5px 5px 5px 8px #8b8a8a ;
+			background-color: rgb(247, 222, 222);
+			border-radius:5px
+		}
+		.like{
+			display: flex;
+			margin-left: 100px;
+			margin-top: -15px;
+			}
+			input[type=checkbox] {
+            border-radius: 30px;
+            width: 50px;
+            height:20px;
+            background: #ffc773ef;
+			line-height: 1px;
+		}
+		.lable {
+		flex: 1 0 auto;
+		display: inline;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 10px;
+		font-size:16px;
+
+		}
+		.b1 {
+			background-color: #d8d8d8;
+			font-size: 20px;
+			margin-top: 20px;
+
+		}
+
+
+
+
+
+	</style> 
+
+  </head>
+  <body >
+
+		<!-- 手機按鈕 -->
+	<input type="checkbox" name="" id="menu_control">
+	<div class="item">    
+		<label for="menu_control" class="menu_btn">
+			<span>選單</span>
+		</label>
+
+
+	<!-- 手機按鈕 -->
+	<div class="main-header">
+		<div class="w3-container ">
+			<a href="我要領養.html"><img src="img/浪-10.png" alt="loge"></a>
+			<nav><h5><b>
+				<div class="w3-bar">
+				  <div class="nav_bar">
+					<a href="我要領養.html" class="w3-bar-item ">我要領養</a>
+					<a href="爆料.html" class="w3-bar-item ">爆料專區</a>
+					<div class="w3-dropdown-hover">
+						<button class="w3-button" style="font-size: 17px;font-family:Arial;">意 見 回 饋</button>
+						<div class="w3-dropdown-content w3-bar-block w3-card-4">
+							<a href="https://forms.gle/oJC2DeT1gdb2wfpg7" class="w3-bar-item ">會員回饋</a>
+							<a href="https://docs.google.com/spreadsheets/d/1yBip4jbvibY0Wr7W4punanXS3C27ernKUiqJ9R7u5EU/edit?usp=sharing" class="w3-bar-item ">系統回應</a>
+						</div>
+					</div>
+					<a href="知識小學堂.html" class="w3-bar-item ">領養須知</a>
+					<a href="動物醫院.html" class="w3-bar-item ">動物醫院</a>
+					<a href="關於我們.html" class="w3-bar-item ">關於我們</a>
+					<a href="登入.html" class="w3-bar-item ">登入/註冊</a>
+				  </div>
+				</div>
+			</h5></b></nav>
+		</div>
+	</div>
+
+
+
+  <div class="shadowbox">
+
+
+	<h2 style="margin-top: 100px;"><p style="color:#ff3c3c;text-align:center">您的選擇將影響配對結果</p></h2>
+	<h3><p style="color:#0e0e0e;text-align:center">
+	此為媒合問卷<br>
+    請選擇偏好的選項(可複選)<br>
+
+	</p></h3>
+
+
+	<form method="POST" action="teacher_ahp.php">
+		<div class="qscard1">
+		<div style="border:2px #eee solid;border-radius:5px;width:1100px;height:80px;background-color:#eee;">
+			<span style="font-size:25px;color:#000000;">
+			<div class="like">
+				<label class="lable">
+					<h3>1. 性別</h3>
+					<input type="checkbox" ><span>男</span>
+					<input type="checkbox" ><span>女</span>
+				</label>
+				<label class="lable">
+					<h3>2. 體型</h3>
+					<input type="checkbox" ><span>大</span>
+					<input type="checkbox" ><span>中</span>
+					<input type="checkbox" ><span>小</span>
+				</label>
+				<label class="lable">
+					<h3>3. 居住</h3>
+					<input type="checkbox" ><span>大樓</span>
+					<input type="checkbox" ><span>公寓</span>
+					<input type="checkbox" ><span>透天</span>
+				</label>
+				
+				
+
+
+			</div>
+			</span>
+			</div>
+			<br>
+		</div>
+
+
+	<h3><p style="color:#0e0e0e;text-align:center">
+    請以兩項中您較在意的一方進行選擇<br>
+    選項越靠近某項因素則相對更重要<br>
+	例如:年齡與品種間較在意品種，則選擇品種那一側的選項
+	</p></h3>
+	
+	  <div align="center">
+	<form method="POST" action="teacher_ahp.php">
+		<div class="qscard">
+		<div style="border:2px #eee solid;border-radius:5px;width:1100px;height:80px;background-color:#eee;">
+			<span style="font-size:25px;color:#000000;">
+			<div class="controls">
+			<h3 style="font-size: 30px;margin:15px 0px 0px 10px">性別 </h3>
+			<label class="radio">
+			<input  type="radio" name="oneq" value="5">5<br>極為重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="oneq" value="4">4<br>強烈重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="oneq" value="3">3<br>稍微強烈重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="oneq" value="2">2<br>稍微重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="oneq" value="1" checked>1<br>一樣重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="oneq" value="0.5">2<br>稍微重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="oneq" value="0.333333">3<br>稍微強烈重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="oneq" value="0.25">4<br>強烈重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="oneq" value="0.2">5<br>極為重要
+			</label>
+			<h3 style="font-size: 30px;margin:15px 10px 0px 0px">體型</h3>
+			</div>
+			</span>
+			</div>
+			<br>
+			<div style="border:2px #eee solid;border-radius:5px;width:1100px;height:80px;background-color:#eee;">
+			<span style="font-size:25px;color:#000000;">
+			<div class="controls">
+			  <h3 style="font-size: 30px;margin:15px 0px 0px 10px">性別</h3>
+			<label class="radio">
+			<input  type="radio" name="twq" value="5">5<br>極為重要
+		  </label>
+			</label>
+			<label class="radio">
+			<input  type="radio" name="twq" value="4">4<br>強烈重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="twq" value="3">3<br>稍微強烈重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="twq" value="2">2<br>稍微重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="twq" value="1" checked>1<br>一樣重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="twq" value="0.5">2<br>稍微重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="twq" value="0.333333">3<br>稍微強烈重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="twq" value="0.25">4<br>稍微重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="twq" value="0.2">5<br>極為重要
+			</label>
+			<h3 style="font-size: 30px;margin:15px 10px 0px 0px">居住</h3>
+			</div>
+			</span>
+			</div>
+			<br>
+			<div style="border:2px #eee solid;border-radius:5px;width:1100px;height:80px;background-color:#eee;">
+			<span style="font-size:25px;color:#000000;">
+			<div class="controls">
+			  <h3 style="font-size: 30px;margin:15px 0px 0px 10px">體型</h3>
+			<label class="radio">
+			<input  type="radio" name="thq" value="5">5<br>極為重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="thq" value="4">4<br>強烈重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="thq" value="3">3<br>稍微強烈重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="thq" value="2">2<br>稍微重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="thq" value="1" checked>1<br>一樣重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="thq" value="0.5">2<br>稍微重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="thq" value="0.333333">3<br>稍微強烈重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="thq" value="0.25">4<br>強烈重要
+			</label>
+			<label class="radio">
+			<input  type="radio" name="thq" value="0.2">5<br>極為重要
+			</label>
+			<h3 style="font-size: 30px;margin:15px 10px 0px 0px">居住</h3>
+			</div>
+			</span>
+			</div>
+			<br>
+			
+		</div>
+    </form>
+	<button class="b1 w3-button">配對</button>
+	</div>
+	</div>
+
+
+  </body>
+</html>

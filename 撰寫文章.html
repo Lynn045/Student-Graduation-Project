@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>浪牠回家吧 | 文章內容</title>
+
+
+
+
+<!-- W3導覽列 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- 字體 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/cwtexyen.css">
+<link rel="stylesheet" href="https://fonts.google.com/specimen/Raleway?preview.text=01%2002%2003%2004&preview.text_type=custom#standard-styles">
+<!-- icon -->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" >
+
+<!-- AOS動畫 -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+<style>
+    body,h1,h2,h3,h4,h5 {font-family: "cwTeXYen", sans-serif,}
+    body{
+      background-color: #fff3fd;
+      background-repeat:no-repeat;
+      
+
+      
+    }
+</style>
+
+
+
+<style>
+@media screen and (min-width:768px){/*桌機介面*/  
+
+
+  
+
+    /******************************************************** 導覽列******************************************************************************* */
+    .main-header {
+    width: 100%;
+    background-color: #ffffff;
+    position: fixed;
+    right: 0;
+    top: 0%;
+    box-shadow: 0 5px 40px -15px;
+    z-index: 2;   /*東西在上面+這個 */
+    }
+    .nav_bar {
+    display: flex;
+    padding: 10px; 
+    margin-right: 120px   ;
+    letter-spacing: 0.3em ;
+    color: #303030;
+    }  
+    .nav_bar a{
+    text-decoration:none;
+    transition: .5s;
+    font-size: 17px;
+    font-family:Arial;
+    }
+    .nav_bar a:hover{
+        color: #fa9f84;
+    }
+    .container {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    }
+    .main-header img{
+    margin: 15px 150px;
+    }
+    .w3-bar {
+    display: flex;
+    }
+
+    .w3-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    }
+    .w3-bar span {
+      font-size: 2em;
+      font-size: 2em;
+      margin-left: 20px;
+    }
+
+    /* *****************************************************************容器********************************************************** */
+    .container {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 80px;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 100%;
+    max-width: 1140px;      /* // 隨螢幕尺寸而變，當螢幕尺寸 ≥ 1200px 時是 1140px。 */
+    }
+    .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    }
+    .col {
+    position: relative;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+
+}
+/* ********************************************************  置頂button  ************************************************************* */
+.toTop-arrow {
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	border-radius: 33%;
+	opacity: 0.6;
+	background: #000;
+	cursor: pointer;
+	position:fixed;
+	right: 1rem;
+	bottom: 1rem;
+	display: none;
+}
+.toTop-arrow::before, .toTop-arrow::after {
+	width: 18px;
+	height: 5px;
+	border-radius: 3px;
+	background: #fff3fd;
+	position: absolute;
+	content: "";
+}
+.toTop-arrow::before {
+	transform: rotate(-45deg) translate(0, -50%);
+	left: 0.5rem;
+}
+.toTop-arrow::after {
+	transform: rotate(45deg) translate(0, -50%);
+	right: 0.5rem;
+}
+.toTop-arrow:focus {outline: none;}
+
+/*************** 內文 ******************/
+.all-text{
+    width: 1110px;
+    height: auto;
+    background-color: #fff3fd;
+    padding: 30px;
+    border-radius: 5px;
+}
+/* 標題 */
+.post-title{
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 40px;
+    overflow: hidden;
+    border: none;
+    padding: 0px;
+    outline: none;
+    width: 90%;
+    background-color: #fff3fd;
+}
+/* 時間 種類 */
+.type-time ul{
+  list-style: none;
+  margin: 30px 50px 10px 50px;
+  padding: 5px;
+}
+.type-time ul li{
+  display:inline;
+  margin-right: 5px;
+}
+.type-time i{
+  padding-right: 8px;
+}
+.type-time a{
+  background-color: #ffd3d3bb;
+  color: #3d3d3d;
+  padding: 6px 10px;
+  border-radius: 2px;
+  font-weight: 600;
+  transition: .3s;
+  text-decoration:none;
+}
+.type-time a:hover{
+  background-color: #fabba8cf;
+  color: #ffffff;
+}
+/* 文章內文 */
+
+
+/* ************  收藏   *********/
+.like-btn {
+  position: absolute;
+  display:inline;
+  margin-top: 3px;
+}
+
+.like-btn:active{
+  transform: scale(0.9, 0.9);
+}
+.like-btn.active{
+  animation: pop 0.6s 1;
+}
+.like-btn path {
+  fill: #767676;
+}
+.like-btn.active path{
+  fill: #ec3e3e;
+}
+/* 愛心數 */
+.hreat ul{
+  padding-left: 8px;
+  margin: 50px;
+  margin-top: 80px;
+}
+.hreat ul li {
+  display:inline;
+}
+.hreat .like h3{
+  padding-left: 50px;
+  margin-top: -40px;
+}
+.hreat .count h3{
+  padding-left: 150px;
+  margin-top: -33px;
+}
+.hreat i{
+  color: #767676;
+  margin-top: 3px;
+  font-size: 28px;
+  margin-left: 100px;
+}
+/* 留言 */
+.comment{
+  margin: 30px 50px 30px 50px;
+}
+.comment ul{
+  padding-left: 20px;
+}
+.comment li {
+  display: inline;
+  margin-right: 20px;
+}
+.comment img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.comment-text{
+  padding-left: 80px;
+  margin-top: -60px;
+}
+/* 內文 */
+.post-text{
+width: 90%;
+outline: 0;
+border: none;
+padding: 2px;
+margin: 50px 50px 30px 50px;
+outline-color: #fff3fd;
+position: relative;
+flex: 1 1 0%;
+line-height: 22px;
+font-size: 16px;
+outline: none;
+word-break: break-word;
+overflow: hidden;
+}
+.post-text:empty:before{
+    content: attr(placeholder);
+    color: #767676;
+}
+/* 相簿.發布 */
+.small{
+    position: fixed;
+    bottom: 0px;
+    z-index: 1;
+    width: 100%;
+}
+
+
+/* 相片 */
+.btn-img{
+    outline: none;
+    background: none;
+    border: none;
+    margin: 50px;
+}
+.picture{
+    pointer-events: none;
+    touch-action: none;
+}
+.post-image{
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+}
+/* 相片檔案 */
+.file{
+    display: none;
+}
+/* 發布 */
+.publish{
+    margin-left: 750px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    opacity: 0.3;
+    font-size: 20px;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+}
+.publish :hover{
+    font-weight: 600;
+}
+
+
+}
+
+  </style>
+
+
+</head>
+
+<body>
+
+/* <!-- 手機按鈕 --> */
+<input type="checkbox" name="" id="menu_control">
+<div class="item">    
+    <label for="menu_control" class="menu_btn">
+        <span>選單</span>
+    </label>
+</div>
+
+	<!-- 手機按鈕 -->
+	<div class="main-header">
+		<div class="w3-container ">
+			<a href="#"><img src="img/浪-10.png" alt="loge"></a>
+			<nav><h5><b>
+				<div class="w3-bar">
+				  <div class="nav_bar">
+					<a href="我要領養.html" class="w3-bar-item ">我要領養</a>
+					<a href="爆料.html" class="w3-bar-item ">爆料專區</a>
+					<div class="w3-dropdown-hover">
+						<button class="w3-button" style="font-size: 17px;font-family:Arial;">意 見 回 饋</button>
+						<div class="w3-dropdown-content w3-bar-block w3-card-4">
+							<a href="https://forms.gle/oJC2DeT1gdb2wfpg7" class="w3-bar-item ">會員回饋</a>
+							<a href="https://docs.google.com/spreadsheets/d/1yBip4jbvibY0Wr7W4punanXS3C27ernKUiqJ9R7u5EU/edit?usp=sharing" class="w3-bar-item ">系統回應</a>
+						</div>
+					</div>
+					<a href="知識小學堂.html" class="w3-bar-item ">領養須知</a>
+					<a href="動物醫院.html" class="w3-bar-item ">動物醫院</a>
+					<a href="關於我們.html" class="w3-bar-item ">關於我們</a>
+					<a href="登入.html" class="w3-bar-item ">登入/註冊</a>
+				  </div>
+				</div>
+			</h5></b></nav>
+		</div>
+	</div>
+
+
+
+<!-- *************************************************  內容  *************************************************** --> 
+
+<div class="container">
+  <div class="row">
+    <div class="row">
+
+
+<!-- *************************************************  置頂button  *************************************************** -->
+<button type="button" id="BackTop" class="toTop-arrow" title="回上面"></button>
+
+
+<!-- *************************************************  內文  *************************************************** -->
+
+<div class="all-text">
+<!-- 標題 -->
+<div class="post-title">
+    <textarea rows="1" class="post-title" placeholder="標題" name="title" style="height: 40px;"></textarea>
+</div>
+
+
+<div class="type-time">
+    <!-- 標籤 -->
+    <ul>
+
+    <!-- 時間 -->
+      <li id="current_date">
+
+      </li>
+    </ul>
+
+  </div>
+
+<!-- 內文文章 -->
+
+  <div class='post-text' contenteditable="true" placeholder='想要說些什麼呢...'></div>
+
+
+  <div class="small">
+
+
+        <!-- 相簿 -->
+        <button type="button" class="btn-img">
+            <label class="post-image">
+                    <svg viewBox="0 0 24 24" class="picture" focusable="false" width="30" height="30" role="img" aria-hidden="true" style="fill: rgba(0, 0, 0, 0.5);">
+                        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2zM16.5 5.5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2zm2.5 13v-3l-2.37-2.77a1 1 0 0 0-1.38-.13L13.5 14 9.7 9.78a1 1 0 0 0-1.45-.04L5 13v5.5a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5z">
+                        </path>
+                    </svg>
+                    <input type="file" accept="image/jpeg,image/png,image/gif,image/webp,image/tiff" id="editor-image" class="file" value="" multiple>
+            </label>
+        </button>
+
+        <button type="button" class="publish">
+            <div>發布</div>
+        </button>
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+      
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+
+   date = new Date();
+   year = date.getFullYear();
+   month = date.getMonth() + 1;
+   day = date.getDate();
+   document.getElementById("current_date").innerHTML = year + "/" + month + "/" +day ;
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
